@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Login Screen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="mobile-shell">
+    <section class="login-card" aria-labelledby="login-heading">
+      <!-- App Brand Header -->
+      <div class="brand">
+        <div class="logo-badge" aria-hidden="true">V</div>
+        <h1 id="login-heading">Welcome Back</h1>
+        <p class="subtitle">Sign in to continue to your mobile workspace</p>
+      </div>
+
+      <!-- Status Banner -->
+      <div id="statusMessage" class="status-msg" role="alert" hidden></div>
+
+      <!-- Login Form -->
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          />
+          <small class="error-text" id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+          <div class="label-row">
+            <label for="password">Password</label>
+            <a href="#forgot" id="forgotLink" class="text-link">Forgot Password?</a>
+          </div>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter at least 6 characters"
+              autocomplete="current-password"
+              required
+            />
+            <button
+              type="button"
+              id="togglePassword"
+              class="toggle-btn"
+              aria-label="Show password"
+            >
+              Show
+            </button>
+          </div>
+          <small class="error-text" id="passwordError"></small>
+        </div>
+
+        <div class="remember-row">
+          <label class="checkbox-label">
+            <input type="checkbox" id="rememberMe" checked />
+            <span>Keep me signed in</span>
+          </label>
+        </div>
+
+        <button type="submit" id="loginBtn" class="primary-btn">
+          Sign In
+        </button>
+      </form>
+
+      <!-- Footer Navigation -->
+      <p class="footer-text">
+        Don't have an account?
+        <a href="#register" id="registerLink" class="text-link strong">Create Account</a>
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
